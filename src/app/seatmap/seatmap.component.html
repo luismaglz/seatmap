@@ -1,13 +1,14 @@
+<input type="checkbox" [(ngModel)]="matchDesign" (onChange)="change()"/>Match Designs With Staggering
+
 <ng-container *ngIf="_seatmap">
-<div>{{ _seatmap.seatMap.name }}</div>
 <div class="seatmap" *ngFor="let deck of (_seatmap.seatMap.decks | keyvalue)">
   <div class="compartment"
     *ngFor="let compartment of (deck.value.compartments | keyvalue)"
-    seatmapGridCompartment
+    seatmapGridCompartment [match]="matchDesign" [multiplier]="multiplier"
     [compartment]="compartment.value">
     <ng-container *ngFor="let unit of compartment.value.units" [ngSwitch]="unit.type">
-      <div *ngSwitchCase="'NormalSeat'" seatmapSeatUnit [unit]="[unit, 20]" class="seat unit"></div>
-      <div *ngSwitchDefault seatmapUnit [unit]="unit"></div>
+      <div *ngSwitchCase="'NormalSeat'" seatmapSeatUnit [spacingBySet]="spacingBySet" [unit]="[unit, 20]" [match]="matchDesign" [multiplier]="multiplier"  class="seat unit"></div>
+      <div *ngSwitchDefault seatmapUnit [spacingBySet]="spacingBySet" [match]="matchDesign" [multiplier]="multiplier"  [unit]="unit"></div>
     </ng-container>
   </div>
 </div>

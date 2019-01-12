@@ -1,7 +1,6 @@
  .seatmap-container {
       width: 800px;
       display: inline-block;
-      padding: 20px;
   }
 
   .seat {
@@ -22,6 +21,14 @@
       overflow: hidden;
   }
 
+  .group-2 {
+    background-color: #9BD3ED;
+  }
+
+  .group-3 {
+    background-color: #1273A5;
+  }
+
   .unit-area {
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 5px;
@@ -30,8 +37,6 @@
   .seatmap {
       background-color: #fff;
       border-radius: 280px;
-      padding: 155px 0;
-      width: 570px;
   }
 
   .compartment {
@@ -39,6 +44,7 @@
       display: -ms-grid;
       grid-column-gap: 10px;
       grid-row-gap: 0px;
+      border-top:1px solid grey;
   }
 
   .designator,
@@ -79,7 +85,8 @@
   }
 
   .exit {
-      color: #45C48B;
+      background-color: #45C48B;
+      border-radius: 5px;
   }
 
   .exit.rotate0 {
