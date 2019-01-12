@@ -1,0 +1,14 @@
+<ng-container *ngIf="_seatmap">
+<div>{{ _seatmap.seatMap.name }}</div>
+<div class="seatmap" *ngFor="let deck of (_seatmap.seatMap.decks | keyvalue)">
+  <div class="compartment"
+    *ngFor="let compartment of (deck.value.compartments | keyvalue)"
+    seatmapGridCompartment
+    [compartment]="compartment.value">
+    <ng-container *ngFor="let unit of compartment.value.units" [ngSwitch]="unit.type">
+      <div *ngSwitchCase="'NormalSeat'" seatmapSeatUnit [unit]="[unit, 20]" class="seat unit"></div>
+      <div *ngSwitchDefault seatmapUnit [unit]="unit"></div>
+    </ng-container>
+  </div>
+</div>
+</ng-container>

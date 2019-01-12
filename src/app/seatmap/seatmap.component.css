@@ -1,0 +1,99 @@
+ .seatmap-container {
+      width: 800px;
+      display: inline-block;
+      padding: 20px;
+  }
+
+  .seat {
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;	
+      background-color: #00205B;
+      cursor: pointer;
+      color: #fff;
+  }
+
+  .unit {
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+  }
+
+  .unit-area {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+  }
+
+  .seatmap {
+      background-color: #fff;
+      border-radius: 280px;
+      padding: 155px 0;
+      width: 570px;
+  }
+
+  .compartment {
+      display: grid;
+      display: -ms-grid;
+      grid-column-gap: 10px;
+      grid-row-gap: 0px;
+  }
+
+  .designator,
+  .price {
+      display: block;
+      font-size: 16px;
+  }
+
+  .designator {
+      color: #068587;
+  }
+
+  .price {
+      color: #45C48B;
+      font-size: 12px;
+  }
+
+  mat-icon {
+      font-family: 'Material Icons';
+      font-size: 28px;
+  }
+
+   .left-wing {
+    -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .right-wing {
+    -webkit-clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+  } 
+
+  .right-wing,
+  .left-wing {
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+  }
+
+  .exit {
+      color: #45C48B;
+  }
+
+  .exit.rotate0 {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+  }
+
+  .lavatory {
+      color: #06858C;
+  }
+
+  .luggage {
+      color: #402F2E;
+  } 
